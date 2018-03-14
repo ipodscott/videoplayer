@@ -68,6 +68,9 @@ position: relative;
     border-style: solid;
     border-width: 1px;
     border-color: #333;
+    background-image: url(images/eclipse.svg);
+    background-position: center center;
+    background-repeat: no-repeat;
 }
 
 video,
