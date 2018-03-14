@@ -1,6 +1,6 @@
 # Video Player
 Video player that can work with any format or url source.
-# YouTube  
+# YouTube Introduction:  
 https://www.youtube.com/watch?v=qfZ4tQ2IktA  
 # Sample Links:  
 Wistia: http://wpwebos.com/magazine_v3/vid/vid.php?u=8p1mke6hq2&t=Leo%20Burnett&res=wis&vt=wis  
