@@ -71,6 +71,8 @@ position: relative;
     background-image: url(images/eclipse.svg);
     background-position: center center;
     background-repeat: no-repeat;
+    background-color: #000;
+    background-size: 50% 50%;
 }
 
 video,
@@ -192,13 +194,13 @@ iframe,
 				</div>
 					
 			<?php }else if ($x=&$_GET["vt"] == "tn"){ ?>	
-				<video controls="controls" src="//tinyurl.com/<?php echo htmlspecialchars($_GET["u"]);?>"></video>
+				<video autoplay controls="controls" src="//tinyurl.com/<?php echo htmlspecialchars($_GET["u"]);?>"></video>
 			
 			<?php }else if ($x=&$_GET["vt"] == "bt"){ ?>	
-				<video controls="controls" src="//bit.ly/	<?php echo htmlspecialchars($_GET["u"]);?>"></video>	
+				<video autoplay controls="controls" src="//bit.ly/	<?php echo htmlspecialchars($_GET["u"]);?>"></video>	
 							
 			<?php }else{ ?>
-			 <video controls="controls" src="<?php echo htmlspecialchars($_GET["u"]);?>"></video>
+			 <video autoplay controls="controls" src="<?php echo htmlspecialchars($_GET["u"]);?>"></video>
 			<?php } ?>
 				
 			
