@@ -1,7 +1,8 @@
 <html>
 	<head>
-
-	<link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700" rel="stylesheet">
+	<link href="//vjs.zencdn.net/7.1.0/video-js.css" rel="stylesheet">
+	<link href="//fonts.googleapis.com/css?family=Lato:100,300,400,700" rel="stylesheet">
+	<script src="//vjs.zencdn.net/ie8/ie8-version/videojs-ie8.min.js"></script>
 	<style type="text/css">
 body {
 	position: fixed;
@@ -78,9 +79,7 @@ position: relative;
     background-size: 120px 120px;
 }
 
-video,
-iframe,
-.wistia_embed {
+.video-js, video, iframe, .wistia_embed {
     display: block;
     position: absolute;
     top: 0;
@@ -88,6 +87,11 @@ iframe,
     width: 100%;
     height: 100%
 }
+
+.video-js { color: #999; }
+.video-js .vjs-control-bar { background-color: rgba(0, 0, 0, 0.64); border-radius: 6px; width: calc(100% - 20px); margin: 10px; opacity: 0.1; transition: all 0.5s;}
+.video-js .vjs-control-bar:hover{opacity: 1;}
+.video-js .vjs-play-progress { background: #ff0000; -webkit-box-shadow:inset 0 0 5px 0 #000000; box-shadow:inset 0 0 5px 0 #000000;}
 
 .wistia_responsive_wrapper {
     height: 100%;
@@ -196,15 +200,43 @@ iframe,
 					<div class="wistia_embed wistia_async_<?php echo htmlspecialchars($_GET["u"]);?> videoFoam=true">&nbsp;</div>
 				</div>
 					
-			<?php }else if ($x=&$_GET["vt"] == "tn"){ ?>	
-				<video autoplay controls="controls" src="//tinyurl.com/<?php echo htmlspecialchars($_GET["u"]);?>"></video>
+			<?php }else if ($x=&$_GET["vt"] == "tn"){ ?>
 			
-			<?php }else if ($x=&$_GET["vt"] == "bt"){ ?>	
-				<video autoplay controls="controls" src="//bit.ly/	<?php echo htmlspecialchars($_GET["u"]);?>"></video>	
+				<video id="my-video" class="video-js vjs-big-play-centered" controls preload="auto" data-setup="{}">
+			    <source src="//tinyurl.com/<?php echo htmlspecialchars($_GET["u"]);?>" type='video/mp4'>
+			    
+			    <p class="vjs-no-js">
+			      To view this video please enable JavaScript, and consider upgrading to a web browser that
+			      <a href="https://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
+			    </p>
+			  	</video>	
+				
+			
+			<?php }else if ($x=&$_GET["vt"] == "bt"){ ?>
+				
+				<video id="my-video" class="video-js vjs-big-play-centered" controls preload="auto" data-setup="{}">
+			    <source src="//bit.ly/	<?php echo htmlspecialchars($_GET["u"]);?>" type='video/mp4'>
+			    
+			    <p class="vjs-no-js">
+			      To view this video please enable JavaScript, and consider upgrading to a web browser that
+			      <a href="https://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
+			    </p>
+			  	</video>
+				
 							
 			<?php }else{ ?>
-			 <video autoplay controls="controls" src="<?php echo htmlspecialchars($_GET["u"]);?>"></video>
-			<?php } ?>
+			
+			
+				<video id="my-video" class="video-js vjs-big-play-centered" controls preload="auto" data-setup="{}">
+			    <source src="<?php echo htmlspecialchars($_GET["u"]);?>" type='video/mp4'>
+			    
+			    <p class="vjs-no-js">
+			      To view this video please enable JavaScript, and consider upgrading to a web browser that
+			      <a href="https://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
+			    </p>
+			  	</video>
+			  	
+			 <?php } ?>
 				
 			
 			
@@ -216,4 +248,5 @@ iframe,
 			</div>			
 	
 	</body>
+	<script src="//vjs.zencdn.net/7.1.0/video.js"></script>
 </html>
