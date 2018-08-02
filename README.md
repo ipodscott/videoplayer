@@ -3,7 +3,7 @@ Video player that can work with any format or url source.
 # YouTube Introduction:  
 https://www.youtube.com/watch?v=qfZ4tQ2IktA  
 # Sample Links:  
-<a href="http://wpwebos.com/magazine_v3/vid/vid.php?u=8p1mke6hq2&t=Leo%20Burnett&res=wis&vt=wis" target="_blank">Wistia:</a>
+<a href="http://wpwebos.com/magazine_v3/vid/vid.php?u=8p1mke6hq2&t=Leo%20Burnett&res=wis&vt=wis" target="_blank">Wistia Sample</a><br />
 Vimeo: http://wpwebos.com/magazine_v3/vid/vid.php?u=97622580&t=Things%20To%20Come&res=16x9&vt=vim  
 YouTube Standard: http://wpwebos.com/magazine_v3/vid/vid.php?u=SoXkgIsIiQE&t=Sky%20King%20-%20Sky%20Robbers&res=stnd&vt=yt  
 YouTube Widscreen: http://wpwebos.com/magazine_v3/vid/vid.php?u=Og5-Pm4HNlI&t=Overwatch%20Infiltration&res=16x9&vt=yt  
