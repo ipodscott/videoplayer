@@ -1,13 +1,56 @@
 <html>
 	<head>
-		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+		<title>Universal Movie Player 1.0</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black" />
 		
+		<link rel="stylesheet" href="//stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+		<link href="https://fonts.googleapis.com/css?family=Lato:300,400" rel="stylesheet">
 		
+		<script src="//code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+		<script src="//cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+		<script src="//stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 				
 		<style type="text/css">
+			
+			body{
+				background: #2e2e2e;
+				color: #efefef;
+				font-family: 'Lato', sans-serif;
+				font-weight: 300;
+			}
+			
+				h1, h3{
+				
+				font-weight: 300;	
+			}
+			
+		
+			h1{
+				font-size: calc(24px + 6 * ((100vw - 320px) / 680));
+			}
+			
+			h3{
+				font-size: calc(14px + 6 * ((100vw - 320px) / 680));
+				
+			}
+			
+		
+			
+			.form-group{
+				background-color: #000;
+				border-style: solid;
+				border-color: #666;
+				border-width: 1px;	
+				padding: 20px;
+				border-radius: 6px;
+				-webkit-box-shadow: 0 0 30px 0 #000000;
+				box-shadow: 0 0 30px 0 #000000;
+			}
+			
+			
 			.video-type{
 				width: 100%;
 				display: block;
@@ -23,10 +66,6 @@
 				margin: 0 0 20px 0;
 			}
 			
-			h3{
-				margin-bottom: 0;
-				font-size: 18px;
-			}
 			
 			.video-builder{
 				 display: flex;
@@ -40,7 +79,7 @@
 			.video-builder-form{
 				display: block;
 				position: relative;
-				width: calc(100vw - 40px);
+				width: calc(100vw - 80px);
 				margin: 0 auto;
 				max-width: 960px;
 			}
@@ -73,6 +112,7 @@
 		<div class="video-builder">
 			
 		 <form id="movie-form" class="video-builder-form" action="" method="post">
+			 <h1>Video Builder</h1>
 			 <div class="form-group">
 			 <h3>Video Source </h3>
 	<input type="text" class="text-area form-control" name="video_src"></input>
@@ -102,6 +142,7 @@
       
         <?php
 	  $videoRoot = 'https://wpwebos.com/video/';
+	  $resetLink = 'https://wpwebos.com/video/';
 	  $vidSrc = (isset($_POST['video_src'])) ? $_POST['video_src'] : '';
       $vidType = (isset($_POST['video_type'])) ? $_POST['video_type'] : '';
       $resolution = (isset($_POST['resolution'])) ? $_POST['resolution'] : '';
@@ -111,7 +152,7 @@
      <?php if(isset( $_POST['Submit']) && $msg=='' )
     {?>
                <textarea id="movie-url" class="text-area form-control"><?php echo($videoRoot);?>?u=<?php echo($vidSrc);?>&vt=<?php echo($vidType);?>&res=<?php echo($resolution);?>&t=<?php echo($vidTitle);?></textarea>
-              <div class=""><a class="view-movie btn btn-secondary" href="<?php echo($videoRoot);?>?u=<?php echo($vidSrc);?>&vt=<?php echo($vidType);?>&res=<?php echo($resolution);?>&t=<?php echo($vidTitle);?>" target="_blank">View Movie</a> <a href="<?php echo($videoRoot);?>movie-builder" class="btn btn-danger">Reset</a></div>
+              <div class=""><a class="view-movie btn btn-secondary" href="<?php echo($videoRoot);?>?u=<?php echo($vidSrc);?>&vt=<?php echo($vidType);?>&res=<?php echo($resolution);?>&t=<?php echo($vidTitle);?>" target="_blank">View Movie</a> <a href="<?php echo($resetLink);?>movie-builder" class="btn btn-danger">Reset</a></div>
        </div> 
      
      
