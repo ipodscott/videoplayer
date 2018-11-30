@@ -1,9 +1,17 @@
 <html>
 	<head>
-
+	<title><?php echo htmlspecialchars($_GET["t"]);?></title>
 	<link href="https://fonts.googleapis.com/css?family=Material+Icons|Montserrat:400,600,700" rel="stylesheet">
-	<meta property="og:url" content="http://wpwebos.com/video/?u=<?php echo htmlspecialchars($_GET["u"]);?>&vt=<?php echo htmlspecialchars($_GET["vt"]);?>&res=<?php echo htmlspecialchars($_GET["res"]);?>" />
+	<meta property="og:url" content="https://github.com/ipodscott/videoplayer" />
 	<meta property="og:type" content="movie" />
+	<meta property="og:title" content="<?php echo htmlspecialchars($_GET["t"]);?>" />
+	<meta property="og:description" content="Universal Video Player 1.0" />
+	<meta property="og:image" content="http://www.wpwebos.com/video/images/tv.jpg" />
+	
+	<meta name="twitter:card" content="<?php echo htmlspecialchars($_GET["t"]);?>" />
+	<meta name="twitter:site" content="@ipodscott" />
+	<meta name="twitter:creator" content="@ipodscott" />
+	<meta property="og:url" content="https://github.com/ipodscott/videoplayer" />
 	<meta property="og:title" content="<?php echo htmlspecialchars($_GET["t"]);?>" />
 	<meta property="og:description" content="Universal Video Player 1.0" />
 	<meta property="og:image" content="http://www.wpwebos.com/video/images/tv.jpg" />
