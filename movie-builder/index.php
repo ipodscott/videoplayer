@@ -1,13 +1,11 @@
 <html>
 	<head>
-		<title>Universal Movie Player 1.0</title>
+		<title>Universal Movie Builder 1.0</title>
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-		<meta name="apple-mobile-web-app-capable" content="yes" />
-		<meta name="apple-mobile-web-app-status-bar-style" content="black" />
 		
 		<link rel="stylesheet" href="//stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-		<link href="https://fonts.googleapis.com/css?family=Lato:300,400" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Lato:100,300,400" rel="stylesheet">
 		
 		<script src="//code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 		<script src="//cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
@@ -20,11 +18,12 @@
 				color: #efefef;
 				font-family: 'Lato', sans-serif;
 				font-weight: 300;
+				font-size: calc(12px + 6 * ((100vw - 320px) / 680));
 			}
 			
 				h1, h3{
 				
-				font-weight: 300;	
+				font-weight: 100;	
 			}
 			
 		
