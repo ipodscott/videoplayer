@@ -1,9 +1,11 @@
 # Video Player
 Video player that can work with any format or url source. The goal is to take any video format and "mask" it so that it appears to come from a common URL.
 # Movie Builder
-Movie builder is a simple interface add video sources. A root player url is created via php variable that will allows the user to generate the video urls based on any installation location of the video player.   
-# YouTube Introduction:  
-https://www.youtube.com/watch?v=qfZ4tQ2IktA  
+Movie builder is a simple interface add video sources. A root player url is created via php variable that will allows the user to generate the video urls based on any installation location of the video player.
+# Video Player Introduction:  
+https://www.youtube.com/watch?v=qfZ4tQ2IktA
+# Video Builder Introduction:
+https://www.youtube.com/watch?v=sd-dH0wqr_Y
 # Sample Links:  
 Wistia: http://wpwebos.com/video/?u=8p1mke6hq2&t=Leo%20Burnett&res=wis&vt=wis  
 Vimeo: http://wpwebos.com/video/?u=97622580&t=Things%20To%20Come&res=16x9&vt=vim  
