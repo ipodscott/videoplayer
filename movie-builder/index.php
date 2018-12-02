@@ -149,8 +149,8 @@
      
      <?php if(isset( $_POST['Submit']) && $msg=='' )
     {?>
-               <textarea id="movie-url" class="text-area form-control"><?php echo($videoRoot);?>?u=<?php echo($vidSrc);?>&vt=<?php echo($vidType);?>&res=<?php echo($resolution);?>&t=<?php echo($vidTitle);?></textarea>
-              <div class=""><a class="view-movie btn btn-secondary" href="<?php echo($videoRoot);?>?u=<?php echo($vidSrc);?>&vt=<?php echo($vidType);?>&res=<?php echo($resolution);?>&t=<?php echo($vidTitle);?>" target="_blank">View Movie</a> <button class="btn btn-danger" type="submit"  onclick="dummy(0);return false;">Reset Builder</button></div>
+               <textarea onclick="copyScript()" id="movie-url" class="text-area form-control"><?php echo($videoRoot);?>?u=<?php echo($vidSrc);?>&vt=<?php echo($vidType);?>&res=<?php echo($resolution);?>&t=<?php echo($vidTitle);?></textarea>
+              <div class=""><a class="view-movie btn btn-secondary" href="<?php echo($videoRoot);?>?u=<?php echo($vidSrc);?>&vt=<?php echo($vidType);?>&res=<?php echo($resolution);?>&t=<?php echo($vidTitle);?>" target="_blank">View Movie</a> <button class="btn btn-danger btn-sm" type="submit"  onclick="dummy(0);return false;">Reset Builder</button></div>
        </div> 
      
      
@@ -163,5 +163,20 @@
     
 		</div>
 	</body>
+	<script>
+		function copyScript() {
+  /* Get the text field */
+  var copyText = document.getElementById("movie-url");
+
+  /* Select the text field */
+  copyText.select();
+
+  /* Copy the text inside the text field */
+  document.execCommand("copy");
+
+  /* Alert the copied text */
+  alert("Copied the text: " + copyText.value);
+}
+		</script>
 	
 </html>
