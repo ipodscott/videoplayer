@@ -15,7 +15,7 @@
 			
 			body{
 				background: #2e2e2e;
-				color: #efefef;
+				color: #fff;
 				font-family: 'Lato', sans-serif;
 				font-weight: 300;
 				font-size: calc(12px + 6 * ((100vw - 320px) / 680));
@@ -23,7 +23,7 @@
 			
 				h1, h3{
 				
-				font-weight: 100;	
+				font-weight: 300;	
 			}
 			
 		
@@ -141,7 +141,6 @@
       
         <?php
 	  $videoRoot = 'https://wpwebos.com/video/';
-	  $resetLink = 'https://wpwebos.com/video/';
 	  $vidSrc = (isset($_POST['video_src'])) ? $_POST['video_src'] : '';
       $vidType = (isset($_POST['video_type'])) ? $_POST['video_type'] : '';
       $resolution = (isset($_POST['resolution'])) ? $_POST['resolution'] : '';
@@ -151,7 +150,7 @@
      <?php if(isset( $_POST['Submit']) && $msg=='' )
     {?>
                <textarea id="movie-url" class="text-area form-control"><?php echo($videoRoot);?>?u=<?php echo($vidSrc);?>&vt=<?php echo($vidType);?>&res=<?php echo($resolution);?>&t=<?php echo($vidTitle);?></textarea>
-              <div class=""><a class="view-movie btn btn-secondary" href="<?php echo($videoRoot);?>?u=<?php echo($vidSrc);?>&vt=<?php echo($vidType);?>&res=<?php echo($resolution);?>&t=<?php echo($vidTitle);?>" target="_blank">View Movie</a> <a href="<?php echo($resetLink);?>movie-builder" class="btn btn-danger">Reset</a></div>
+              <div class=""><a class="view-movie btn btn-secondary" href="<?php echo($videoRoot);?>?u=<?php echo($vidSrc);?>&vt=<?php echo($vidType);?>&res=<?php echo($resolution);?>&t=<?php echo($vidTitle);?>" target="_blank">View Movie</a> <button class="btn btn-danger" type="submit"  onclick="dummy(0);return false;">Reset Builder</button></div>
        </div> 
      
      
@@ -164,4 +163,5 @@
     
 		</div>
 	</body>
+	
 </html>
