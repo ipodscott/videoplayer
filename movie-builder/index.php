@@ -5,7 +5,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 		
 		<link rel="stylesheet" href="//stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-		<link href="https://fonts.googleapis.com/css?family=Lato:100,300,400" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Material+Icons|Lato:100,300,400" rel="stylesheet">
 		
 		<script src="//code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 		<script src="//cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
@@ -16,7 +16,7 @@
 			body{
 				background: #2e2e2e;
 				color: #fff;
-				font-family: 'Lato', sans-serif;
+				font-family: 'Lato', san-serif;
 				font-weight: 300;
 				font-size: calc(12px + 6 * ((100vw - 320px) / 680));
 			}
@@ -36,7 +36,26 @@
 				
 			}
 			
-		
+			.url-box{
+				display: block;
+				position: relative;
+				width: auto;
+				height: auto;
+			}
+			
+			.url-box .material-icons{
+				color: #000;
+				position: absolute;
+				top:5px;
+				right: 5px;
+				cursor: pointer;
+				transition:all 0.5s;
+			}
+			
+			.url-box .material-icons:hover{
+				color: rgba(0, 0, 0, 0.3);
+			}
+			
 			
 			.form-group{
 				background-color: #000;
@@ -111,7 +130,7 @@
 		<div class="video-builder">
 			
 		 <form id="movie-form" class="video-builder-form" action="" method="post">
-			 <h1>Video Builder</h1>
+			 <h1>Movie Builder</h1>
 			 <div class="form-group">
 			 <h3>Video Source </h3>
 	<input type="text" class="text-area form-control" name="video_src"></input>
@@ -149,7 +168,7 @@
      
      <?php if(isset( $_POST['Submit']) && $msg=='' )
     {?>
-               <textarea onclick="copyScript()" id="movie-url" class="text-area form-control"><?php echo($videoRoot);?>?u=<?php echo($vidSrc);?>&vt=<?php echo($vidType);?>&res=<?php echo($resolution);?>&t=<?php echo($vidTitle);?></textarea>
+               <div class="url-box"><textarea id="movie-url" class="text-area form-control"><?php echo($videoRoot);?>?u=<?php echo($vidSrc);?>&vt=<?php echo($vidType);?>&res=<?php echo($resolution);?>&t=<?php echo($vidTitle);?></textarea> <i class="material-icons" onclick="copyScript()";>file_copy</i></div>
               <div class=""><a class="view-movie btn btn-secondary" href="<?php echo($videoRoot);?>?u=<?php echo($vidSrc);?>&vt=<?php echo($vidType);?>&res=<?php echo($resolution);?>&t=<?php echo($vidTitle);?>" target="_blank">View Movie</a> <button class="btn btn-danger btn-sm" type="submit"  onclick="dummy(0);return false;">Reset Builder</button></div>
        </div> 
      
@@ -175,7 +194,7 @@
   document.execCommand("copy");
 
   /* Alert the copied text */
-  alert("Copied the text: " + copyText.value);
+  alert("Movie address copied to clipboard.");
 }
 		</script>
 	
