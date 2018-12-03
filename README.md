@@ -2,6 +2,8 @@
 Video player that can work with any format or url source. The goal is to take any video format and "mask" it so that it appears to come from a common URL.
 # Movie Builder
 Movie builder is a simple interface add video sources. A root player url is created via php variable that will allows the user to generate the video urls based on any installation location of the video player.
+# Live Demo:
+https://wpwebos.com/video/movie-builder 
 # Video Player Introduction:  
 https://www.youtube.com/watch?v=qfZ4tQ2IktA
 # Video Builder Introduction:
